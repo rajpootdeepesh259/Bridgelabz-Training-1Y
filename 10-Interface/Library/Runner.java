@@ -1,0 +1,18 @@
+package com.library;
+
+public class Runner {
+    public static void main(String[] args) {
+        
+        Book b1 = new TextBook(101, "Java Programming", 500);
+        Book b2 = new Magazine(102, "Tech Monthly", 200);
+
+        int daysLate = 4;
+        Book[] books = {b1, b2};
+        for (Book b : books) {
+            b.display();
+            double fine = b.calculateFine(daysLate); 
+            System.out.println("Days Late: " + daysLate);
+            System.out.println("Fine: ₹" + fine);
+        }
+    }
+}
